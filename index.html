@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Report Truck Counts</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(90deg, #2f4f4f, #3e7c7c);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    form {
+      max-width: 700px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #2f4f4f;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      box-sizing: border-box;
+      background-color: white;
+    }
+
+    button {
+      background-color: #ffd700;
+      color: #2f2f2f;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e6c200;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Daily Report Truck Counts</h1>
+  </header>
+
+  <form>
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+
+    <label for="zcm-id">ZCM ID</label>
+    <input type="text" id="zcm-id" name="zcm-id" class="form-control" placeholder="606345" required>
+
+    <label for="date">Date of Operation</label>
+    <input type="date" id="date" name="date" class="form-control" required>
+
+    <label for="pit">Pit or Working Area</label>
+    <select id="pit" name="pit" class="form-control" required>
+      <option value="">--Select Pit--</option>
+      <option value="NKN">NKN</option>
+      <option value="MAI02A">MAI02A</option>
+    </select>
+
+    <label for="panel">Panel</label>
+    <select id="panel" name="panel" class="form-control" required>
+      <option value="">--Select Panel--</option>
+      <option value="Panel01">Panel01</option>
+      <option value="Panel02">Panel02</option>
+      <option value="Panel03">Panel03</option>
+    </select>
+
+    <label for="truck-type">Truck Model</label>
+    <select id="truck-type" name="truck-type" class="form-control" required>
+      <option value="">--Select Truck Type--</option>
+      <option value="70T Dump Truck">70T Dump Truck</option>
+      <option value="60T Dump Truck">60T Dump Truck</option>
+      <option value="40T Dump Truck">40T Dump Truck</option>
+    </select>
+
+    <label for="truck-id">Truck Unit Number</label>
+    <input type="text" id="truck-id" name="truck-id" class="form-control" placeholder="Enter truck ID (e.g., DT125)" required>
+
+    <label for="loading-equipment">Loading Equipment</label>
+    <input type="text" id="loading-equipment" name="loading-equipment" class="form-control" placeholder="e.g., Big Excavator" required>
+
+    <label for="loading-id">Loading Unit Number</label>
+    <input type="text" id="loading-id" name="loading-id" class="form-control" placeholder="Enter unit ID (e.g., EX203)" required>
+
+    <label for="total-trips">Total Trips</label>
+    <input type="text" id="total-trips" name="total-trips" class="form-control" placeholder="Enter total trips (e.g., 12)" required>
+
+    <button type="submit">Submit Report</button>
+  </form>
+
+</body>
+</html>
